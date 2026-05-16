@@ -1,25 +1,46 @@
-
-#Ticket booking for Roller coaster ride
-print("Welcome to RollerCoaster Ride")
-height = float(input("Enter your height in cm: "))
-bill = 0
-if height >= 120:
-    print("Hoore! You can ride :)")
-    age = int(input("Enter your Age: "))
-    if age <= 12:
-        bill += 5
-        print("Please pay for ride $05")
-    elif age >=18 and age <=44 :
-        bill += 7
-        print("Please pay for ride $07")
-    elif age >=45 :
-        bill = 0
-        print("Enjoy Your Free Ride")
+#Treasure Hunt Game
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/[TomekK]
+*******************************************************************************''')
+print('Welcome to Treasure Island!\n'
+      'Your Mission is to find the Treasure.')
+path = input("Choose your path 'Left' or 'Right' ?: ")
+if path == 'left':
+    print("You choose Right path :)")
+    choice = input("Choose between one 'Swim' or 'Wait' ?: ")
+    if choice == 'wait':
+        print("Please wait... Your Boat is on the way")
     else:
-        print(":)")
-    photo = input("Do you want a taken photo for $3 then type 'y' if No then type 'N'")
-    if photo == 'y':
-        bill += 3
-    print(f"Your total amount to pay is ${bill} ")
+        print('Attacked by trout.\n'
+              'GAME OVER :(')
+    door = input("Choose any color door 'Red' or 'Green' or 'Yellow' ?: ")
+    if door == 'green':
+        print("OOOreeee! You WIN :)")
+    elif door == 'yellow':
+        print("Oops :( Burned by fire...")
+    elif door == 'red':
+        print("Ooops :( Eaten by beasts...")
+    else:
+        print("GAME OVER :(")
+
 else:
-    print("OOps you can't ride :(" )
+    print('You fall into a hole.\n'
+    'GAME OVER :(')
